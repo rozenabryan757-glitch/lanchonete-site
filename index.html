@@ -1,42 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>KD Lanches</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>KD Lanches</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <h1>🍔 Bryan Delivery</h1>
-    <p>Os melhores lanches da ZO</p>
-  </header>
+<header>
+  <h1>🍔 Daiane Lanches</h1>
+</header>
 
-  <section class="menu">
+<section class="menu">
 
-    <div class="item">
-      <h2>X-Burguer</h2>
-      <p>Pão, carne, queijo</p>
-      <span>R$ 15,00</span>
-      <button onclick="pedir('X-Burguer - R$15')">Pedir</button>
-    </div>
+  <div class="item">
+    <img src="https://imgur.com/a/N0WDlFp">
+    <h2>X-Burguer Artesanal</h2>
+    <p>R$ 15,00</p>
+    <button onclick="addCarrinho('X-Burguer', 15)">Adicionar</button>
+  </div>
 
-    <div class="item">
-      <h2>X-Salada</h2>
-      <p>Pão, carne, queijo, alface e tomate</p>
-      <span>R$ 18,00</span>
-      <button onclick="pedir('X-Salada - R$18')">Pedir</button>
-    </div>
+  <div class="item">
+    <img src="https://imgur.com/a/kXAeDe4">
+    <h2>X-Carne</h2>
+    <p>R$ 18,00</p>
+    <button onclick="addCarrinho('X-Salada', 18)">Adicionar</button>
+  </div>
 
-    <div class="item">
-      <h2>Refrigerante</h2>
-      <p>Lata 350ml</p>
-      <span>R$ 6,00</span>
-      <button onclick="pedir('Refrigerante - R$6')">Pedir</button>
-    </div>
+</section>
 
-  </section>
+<section class="carrinho">
+  <h2>🛒 Carrinho</h2>
+  <ul id="lista"></ul>
+  <p id="total">Total: R$ 0</p>
 
-</body>
+  <input type="text" id="nome" placeholder="Seu nome">
+  <input type="text" id="endereco" placeholder="Seu endereço">
+
+  <button onclick="finalizar()">Finalizar Pedido</button>
+</section>
+
 <script src="script.js"></script>
+</body>
 </html>
